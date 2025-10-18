@@ -1,0 +1,12 @@
+header,
+footer {
+    border: 1px solid #ccc;
+}
+
+main {
+    border: 1px solid #ccc;
+}
+
+img {
+    border: 1px solid gray;
+}

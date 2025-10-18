@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jialin Zhang - Portfolio | Experiments</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Hi, I am Jialin Zhang.</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="picture-demo-heading">
+            <h2 id="picture-demo-heading">Picture</h2>
+            <figure>
+                <picture>
+                    <source media="(min-width: 900px)" srcset="https://via.placeholder.com/960x540?text=LG+Image" />
+                    <source media="(min-width: 600px)" srcset="https://via.placeholder.com/720x405?text=MD+Image" />
+                    <img src="https://via.placeholder.com/480x270?text=SM+Image" alt="Responsive placeholder image"
+                        width="480" height="270" />
+                </picture>
+                <figcaption>Responsive image using picture + source</figcaption>
+            </figure>
+        </section>
+
+        <section aria-labelledby="audio-demo-heading">
+            <h2 id="audio-demo-heading">Audio</h2>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section aria-labelledby="video-demo-heading">
+            <h2 id="video-demo-heading">Video</h2>
+            <video controls width="560" poster="https://via.placeholder.com/560x315?text=Video+Poster">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section aria-labelledby="canvas-demo-heading">
+            <h2 id="canvas-demo-heading">Canvas</h2>
+            <canvas id="exp-canvas" width="360" height="180" aria-label="Sample drawing"></canvas>
+        </section>
+
+        <section aria-labelledby="template-demo-heading">
+            <h2 id="template-demo-heading">Template</h2>
+            <div id="cards"></div>
+            <template id="card-template">
+                <article class="card">
+                    <h3>Card Title</h3>
+                    <p>This content was cloned from a &lt;template&gt;.</p>
+                </article>
+            </template>
+            <p>
+                <button id="add-card" type="button">Add Card</button>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="https://github.com/jialinzhang010" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/jialin-zhang-616547249/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:jiz282@ucsd.edu">Email</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        (function () {
+            var cv = document.getElementById('exp-canvas');
+            if (!cv || !cv.getContext) return;
+            var ctx = cv.getContext('2d');
+            ctx.fillStyle = '#f2f2f2';
+            ctx.fillRect(0, 0, cv.width, cv.height);
+            ctx.fillStyle = '#333';
+            ctx.fillRect(20, 20, cv.width - 40, cv.height - 40);
+        })();
+    </script>
+</body>
+
+</html>
