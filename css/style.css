@@ -10,3 +10,23 @@ main {
 img {
     border: 1px solid gray;
 }
+
+/* CSS-only custom element: note-box */
+note-box {
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 6px solid #4b9cd3;
+    background: #eef7fd;
+    color: #222;
+}
+
+note-box[variant="warning"] {
+    border-left-color: #d38b4b;
+    background: #fff4e8;
+}
+
+note-box[variant="success"] {
+    border-left-color: #3aa76d;
+    background: #ecfbf3;
+}
